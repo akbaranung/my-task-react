@@ -1,0 +1,17 @@
+.alert-danger {
+  background: rgba(243, 2, 2, 0.74);
+  padding: 0.7rem;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background: red;
+  padding: 0.7rem;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+}

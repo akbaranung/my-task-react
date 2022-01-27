@@ -2,10 +2,10 @@ import React from "react";
 import "../styles/Button.css";
 import PropTypes from "prop-types";
 
-const Button = ({ text, variant, action }) => {
+const Button = ({ text, variant, action, load }) => {
   return (
     <button className={`btn btn-${variant}`} onClick={action}>
-      {text}
+      {load ? "loading..." : text}
     </button>
   );
 };

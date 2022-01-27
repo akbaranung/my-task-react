@@ -5,22 +5,16 @@ import PropTypes from "prop-types";
 
 class DeleteModal extends React.Component {
   render() {
-    const { hapus, close, del } = this.props;
-    const delById = (id) => {
-      del(id);
-    };
-    if (hapus) {
+    const { children, isDelete, closeDel, delById } = this.props;
+
+    if (isDelete) {
       return (
         <div className="modal-container">
           <div className="modal-box">
-            <h3>Are you sure?</h3>
+            <h3>{children}</h3>
             <div className="btn-group">
-              <Button
-                text="Yes"
-                variant="primary"
-                action={() => delById(todo.id)}
-              />
-              <Button text="Cancel" variant="warning" action={close} />
+              <Button text="Yes" variant="primary" action={delById} />
+              <Button text="Cancel" variant="warning" action={closeDel} />
             </div>
           </div>
         </div>
